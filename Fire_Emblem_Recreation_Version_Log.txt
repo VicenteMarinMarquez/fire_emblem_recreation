@@ -1,0 +1,225 @@
+FIRE EMBLEM RECREATION -- Version Log
+
+*** Version 0.01 ***
+  Version Description: The current program has no implemented Fire Emblem assets. The program displays a cursor on
+the console that flashes and can be moved in steps upwards, downwards, rightwards, or leftwards.
+  
+  Version Changes:
+  - Initial code created.
+  - Researched how to work with time in java, and the system method "nanoTime()" was implemented.
+  - Established a clock, and a flashing cursor that can be moved with arrow keys.
+  - DISCLAIMER: All imported material is from the sample folder "Programs with graphics". This folder was used to
+attain a basic understanding of the "hsa_ufa.Console" class, but no code was taken and all code in this file was
+written by Vicente Marin-Marquez. Some names such as "c" for the console and "key_code" were inspired by the content
+of the folder, but no lines of code were plagiarized.
+
+*** Version 0.02 ***
+  Version Description: This version includes a displayed map cursor without any functionality
+ 
+  Version Changes:
+  - First class created: Map_cursor
+  - The class "Map_cursor" was created from the pre-existing code for the cursor in the main method.
+  - The class "Map_cursor" got a default constructor and one with parameters which is used in the program. 
+  - The class "Map_cursor" got the "check_inputs" method which updates the position of the cursor (and will carry out
+any other processes that require input keys) when given the current and last keys pressed.
+  - The class "Map_cursor" got the "draw" method which draws its own image when it should.
+  - The code for displaying images onto the console (the synchronized code) has been simplefied to calling the
+respective objects so they draw their own image.
+  
+  - All classes now have a "x" and "y" value that corresponds to their coordinates by grid mark. They now draw their
+images using a variable "pixels_per_grid" that lets them calculate where on the screen to draw their image.
+  - The class "Map_cursor" cannot exceed the console boundraries.
+  
+  - Added an image displayed as terrain for the map.
+
+*** Version 0.03 ***
+ Version Description: This version includes a unit with no current functionality.
+
+ Version Changes:
+ - Class created: Map_unit
+ - The class "Map_unit" was created from the code of the class "Map_cursor", and currently is not very distinct. It
+will gain statistics and properties used in some of the main mechanics of fire emblem later.
+
+ - The main method has been slightly organized and some temporary code has been added to test out how to deal with
+ArrayLists of Instances before more general code that reads chapter data is implemented.
+
+*** Version 0.04 ***
+ Version Description: This version includes better management of the battle map and animations for the cursor and
+units.
+
+ Version Changes:
+ - Class created: Map_mod
+ - Gave all interactions and procedures in the battle map to the class "Map_mod".
+ - The images of "Map_cursor" and "Map_unit" were replaced by animations, and their draw methods now support
+animation with an array of images.
+
+*** Version 0.05 ***
+ Version Description: This version includes multiple animations and a semi-functioning map cursor.
+
+ Version Changes:
+ - Created the variable game_state that keeps track of what procedures the program should be doing (i.e. Title screen,
+World map, Battle map, ...)
+ - The main method has been split into the title screen and battle map game_states. The title screen is blank.
+ - The images for animations in "Map_cursor" and "Map_unit" have been organized into 2D ArrayLists, where each
+individual ArrayList contains the images for an animation.
+ - The "Map_unit" class now reads in its animations from the "unit_data" text file, where each unit is given their
+own section of information.
+ - The "Map_cursor" class now interacts with "Map_unit" instances by communicating with the units it is hovering over
+and the one it has selected.
+ - The "Map_unit" class now shifts its image up if it is being hovered over and plays a different animation if it has
+been selected.
+
+ - The classes "Map_cursor" and "Map_unit" no longer have the "fps" and "p_per_grid" variables, so they instead use
+the corresponding variable from their (map) moderator.
+ - The classes also use variables such as the camera offset and the ArrayList of units from the (map) moderator.
+ 
+*** Version 0.06 ***
+ Version Description: This version includes multiple animations and a semi-functioning map cursor.
+
+ Version Changes:
+ - Allowed the "Map_mod" class to create a map from a text file, creating the appropriate player and enemy units.
+ - Gave the "Map_unit" class variables for the character they represent, the class they are, and what side they 
+affiliate with.
+ - Changed some animation times and the frame rate of the game to 60 frames per second.
+ - Updated map animations to a standard size of 60 x 60 pixels, and added the animations for a brigand.
+
+*** Version 0.07 ***
+ Version Description: This version includes units that display their movement range with blue tiles.
+
+ Version Changes:
+ - Added the images for tiles, that currently do not have a set depth in the map (they may be ontop or below units)
+ - Added a terrain section in the map_data file that the map moderator reads in.
+ - Selected units now display their proper movement range with blue tiles.
+
+*** Version 0.08 ***
+ Version Description: This version includes an arrow that connects a unit to the movement tile the cursor is
+moving it to.
+
+ Version Changes:
+ - Added the images for the arrow, which is above the movement tiles but below the units.
+ - Fixed the depth of the movement tiles so that they are above the terrain, but below the arrow.
+ - Changed code for creating the movement tiles.
+ - Created code in the map cursor class to create and draw the arrow when appropriate.
+ 
+*** Version 0.09 ***
+ Version Description: This version now has some text, in an aethetically similar font.
+
+ Version Changes:
+ - Added the "Text_constructor" class which deals with any text that needs to be displayed.
+ - Credit to Peter Walser for giving an example of how to combine BufferedImages;
+This is the link to his code: http://stackoverflow.com/questions/2318020/merging-two-images
+which was implemented in the "create_text_img" method of the class "Text_constructor".
+ - Gave a "Text_constructor" instance to the "Map_moderator" class.
+ 
+*** Version 0.10 ***
+ Version Description: This version now has a changing map UI, displaying the terrain the cursor is hovering over
+and some of its properties.
+
+ Version Changes:
+ - Added the "Map_ui" class which deals with the UI on the map.
+ - Gave the image of the UI the "Map_ui" class.
+ - The cursor now calls the method "update_ui" in the "Map_ui" instance, to update the image of the UI.
+
+ - Added 2 new fonts.
+
+*** Version 0.11 ***
+ Version Description: This version contains an almost functional game. Units can be selected and moved, and they
+show, but do not execute, actions on the UI.
+
+ Version Changes:
+ - Added the "Item" class, which reads off its information from a file.
+ - Added items to the "unit_data.txt" file, granting playable units items from their first apperance.
+ - Updated the "Map_ui" class to check for inputs and act acoording to them.
+ - The UI now shows the a list of actions that the player can choose from for a unit that they have moved.
+
+ - Gave the main class "Fire_Emblem_Recreation" a static "current_time" that all instances can reference.
+ - Gave all of the Files to "Fire_Emblem_Recreation" so all instances can read them.
+
+*** Version 0.12 ***
+ Version Description: This version contains the basic menu mechanics, but still does not perfrom combat.
+
+ Version Changes:
+ - The Item action in the UI now displays the inventory of the selected unit, but does not do anything.
+ - The Attack action in the UI now displays what will be the combat forecast, but it is empty.
+ - The Wait action grays out the unit but does not switch the phase, essentially stopping the game.
+
+ - Added the mountain terrain.
+ - The map now starts out with only one player unit.
+ 
+*** Version 1.00 *** Pre-Alpha
+ Version Description: This version contains a buggy, yet functional version of the game. It only has one level and
+one character, but that is enough.
+
+ Version Changes:
+ - The Item action now equips weapons
+ - The Attack action is now functional and performs combat (without any animations). Player units gain experience
+from battle. Units can die from battle and will disappear from the map if they do.
+ - Player units that reach 100 experience will level up and have a chance of increasing each stat on level up.
+ - Units that have acted cannot act until the next phase.
+
+ - The game now switches phases when all units have acted.
+ - The enemy now has an AI that moves its units if there is a player unit within range.
+
+ - Basic title, victory, and Game Over screens have been added. When all units have been defeated, the victory screen
+appears. When all players units have been defeated, the Game Over screen appears.
+
+*** Version 1.01 *** Pre-Alpha
+ Version Description: This is a revised version of the 1.00 Pre-Alpha release. Many bugs have been fixed, and some
+features have been added.
+
+ Version Changes:
+ - There is now a slight delay before switching phases.
+ - Created a path finding method in Map_mod that is now used by both the Map_cursor and Army_AI classes instead of
+their independent algorithms.
+
+ Bugs:
+ - Fixed a bug that occasionally crashed the game after combat. Essentially the bug was that enemy units would
+sometimes attack again after the player unit died, performing combat with a dead unit.
+
+*** Version 1.02 *** Pre-Alpha
+ Version Description: This is the first version on Eclipse Neon with no other major changes.
+
+ Version Changes:
+ - Renamed the class with the "public static void main" to Fire_Emblem_Recreation_Main and appropriately referenced it in the other files
+ - Made a resource folder containing all of the images, fonts, and data files.
+ - Made a resource path in the Fire_Emblem_Recreation_Main class that other classes use to find resource files.
+ - All references to files now go through the above path.
+ 
+ - Made the code in all classes and file format fit the Eclipse Neon format.
+ 
+*** Version 1.03 *** Pre-Alpha
+ Version Description:
+
+ Version Changes:
+ - Changed the way the class "Map_mod" reads the map_data.txt file, and added an error message for improper formatting.
+ - Made all variables representing keyboard inputs static in the main class (such as key_char, time_code, ...) 
+and added static methods to check if keys were just pressed.
+
+ - Created a new class that moderates any combat called "Combat_mod" and gave all of the methods that perform combat to it.
+ 
+*** Version 1.04 *** Pre-Alpha (October 6th to 10th, 2016)
+ Version Description:
+
+ Version Changes:
+ - Made many of the methods in the combat moderator class static.
+ - Many classes were made static, meaning that their methods and variables were made static. Some of
+these classes include the "Map_mod", "Map_ui", and "Combat_mod".
+ - The classes "Map_mod" and "Map_ui" are no longer initialized as instances so they has been given an initialization 
+method, which is executed before the main loop for the game.
+ - The class "Map_mod" has been given the "start_map" which is now used to start a map instead of creating a new instance.
+
+ - Vulneraries have been added and can be used to restore 10HP when not at full HP, at the expense of a turn.
+ Bugs:
+ - (A bug fix for this bug seems to have been successful) !Sometimes enemies seem to attack twice!
+ 
+ *** Version 1.05 *** Pre-Alpha (October 10th, 2016)
+ Version Description:
+ 
+ Version Changes:
+ - Changed Combat_mod so that its methods now use static values, since only one combat takes place at a time.
+This also allows it to keep track of the progress of combat over multiple frames.
+ - Combat now takes place in rounds at different frames. Print statements have been added to display the events of each round.
+
+ - Added forts and passive healing due to them.
+ Bugs:
+ - 

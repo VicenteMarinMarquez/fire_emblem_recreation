@@ -1,0 +1,41 @@
+**Font_Start
+0
+*Character_Lengths_Start
+14 44 10 14 10 16 16 16 16 16 16 16 16 16 16 16
+26 65 12 12 12 12 12 12 12 12 10 12 12 10 14 12 12 12 14 12 12 14 12 14 14 14 14 12
+26 97 14 12 12 12 12 10 12 12 6 10 12 6 14 12 12 12 12 10 12 10 12 14 14 14 12 12
+*Character_Lengths_End
+**Font_End
+
+**Font_Start
+1
+*Character_Lengths_Start
+14 44 10 14 10 16 16 16 16 16 16 16 16 16 16 16
+*Character_Lengths_End
+**Font_End
+
+**Font_Start
+2
+*Character_Lengths_Start
+10 48 16 16 16 16 16 16 16 16 16 16
+26 65 12 12 12 12 12 12 12 12 10 12 12 10 14 12 12 12 14 12 12 14 12 14 14 14 14 12
+26 97 14 12 12 12 12 10 12 12 6 10 12 6 14 12 12 12 12 10 12 10 12 14 14 14 12 12
+*Character_Lengths_End
+**Font_End
+
+****FILE_END****
+**** **** **** **** **** **** **** **** **** ****      **** **** **** **** **** **** **** **** **** **** 
+
+//File Format
+**Font_Start
+font_num
+*Character_Lengths_Start
+num_of_chars initial_ascii length1 length2 length3 ... //The horizontal length of each character, starting at a certain ascii character.
+.
+.
+.
+*Character_Lengths_Start
+**Font_End
+.
+.
+.

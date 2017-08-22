@@ -1,0 +1,118 @@
+***Player_Units_Start
+
+**Unit_Start
+1 Lyndis
+*Unit_Stats_Start
+16 6 0 7 9 5 4 0 5 5
+70 40 10 60 60 55 20 30 0 0
+99 99 99 99 99 99 99 99 20 10
+1 80
+*Unit_Stats_End
+*Unit_Animations_Start
+72 4 30 6 30 6
+Images\\map_lyn_0.png Images\\map_lyn_1.png Images\\map_lyn_2.png Images\\map_lyn_1.png
+48 4 20 4 20 4
+Images\\map_lyn_3.png Images\\map_lyn_4.png Images\\map_lyn_5.png Images\\map_lyn_4.png
+24 4 6 6 6 6
+Images\\map_lyn_6.png Images\\map_lyn_7.png Images\\map_lyn_8.png Images\\map_lyn_9.png
+24 4 6 6 6 6
+Images\\map_lyn_10.png Images\\map_lyn_11.png Images\\map_lyn_12.png Images\\map_lyn_13.png
+24 4 6 6 6 6
+Images\\map_lyn_14.png Images\\map_lyn_15.png Images\\map_lyn_16.png Images\\map_lyn_17.png
+24 4 6 6 6 6
+Images\\map_lyn_18.png Images\\map_lyn_19.png Images\\map_lyn_20.png Images\\map_lyn_21.png
+72 4 30 6 30 6
+Images\\map_lyn_22.png Images\\map_lyn_23.png Images\\map_lyn_24.png Images\\map_lyn_23.png
+*Unit_Animations_End
+*Unit_Items_Start
+3 0 1 3 
+*Unit_Items_End
+**Unit_End
+
+**Unit_Start
+2 Lyn_why
+*Unit_Stats_Start
+15 4 0 9 13 6 5 2 4 5
+60 50 20 75 80 70 50 60 0 0
+99 99 99 99 99 99 99 99 20 10
+1 0
+*Unit_Stats_End
+*Unit_Animations_Start
+72 4 30 6 30 6
+Images\\map_lyn_0.png Images\\map_lyn_1.png Images\\map_lyn_2.png Images\\map_lyn_1.png
+*Unit_Animations_End
+*Unit_Items_Start
+*Unit_Items_End
+**Unit_End
+
+***Player_Units_End
+
+
+***Generic_Units_Start
+
+**Unit_Start
+0 Brigand
+*Unit_Animations_Start
+72 4 30 6 30 6
+Images\\map_brigand_0.png Images\\map_brigand_1.png Images\\map_brigand_2.png Images\\map_brigand_1.png
+48 4 20 4 20 4
+Images\\map_brigand_3.png Images\\map_brigand_4.png Images\\map_brigand_5.png Images\\map_brigand_4.png
+24 4 6 6 6 6
+Images\\map_brigand_6.png Images\\map_brigand_7.png Images\\map_brigand_8.png Images\\map_brigand_7.png
+24 4 6 6 6 6
+Images\\map_brigand_9.png Images\\map_brigand_10.png Images\\map_brigand_11.png Images\\map_brigand_10.png
+24 4 6 6 6 6
+Images\\map_brigand_12.png Images\\map_brigand_13.png Images\\map_brigand_14.png Images\\map_brigand_13.png
+24 4 6 6 6 6
+Images\\map_brigand_15.png Images\\map_brigand_16.png Images\\map_brigand_17.png Images\\map_brigand_16.png
+72 4 30 6 30 6
+Images\\map_brigand_18.png Images\\map_brigand_19.png Images\\map_brigand_20.png Images\\map_brigand_19.png
+*Unit_Animations_End
+**Unit_End
+
+***Generic_Units_End
+
+
+****FILE_END****
+**** **** **** **** **** **** **** **** **** ****      **** **** **** **** **** **** **** **** **** **** 
+
+//File Format
+***Player_Units_Start
+**Unit_Start
+unit_num name
+*Unit_Stats_Start //Stats (The order is Base Stats, Stat Growths, Stat Caps)
+max_hp str mag skl spd lck def res con mov //Base Stats
+max_hp str mag skl spd lck def res con mov //Stat Growths
+max_hp str mag skl spd lck def res con mov //Stat Caps
+level xp //The unit's starting level and experience points.
+*Unit_Stats_End
+*Unit_Animations_Start //Animations (The order is idle, action, down, up, right, left)
+total_num_frames total_num_sprites sprite_1_frame_num sprite_2_frame_num  ...
+sprite_1_image sprite_2_image ...
+.
+.
+.
+*Unit_Animations_End
+*Unit_Items_Start
+num_of_items item1_num item2_num ... //The number of items.
+*Unit_Items_End
+**Unit_End
+.
+.
+.
+***Player_Units_End
+***Generic_Units_Start
+class_num name
+**Unit_Start
+*Unit_Animations_Start //Animations (The order is idle, action, down, up, right, left)
+total_num_frames total_num_sprites sprite_1_frame_num sprite_2_frame_num  ...
+sprite_1_image sprite_2_image ...
+.
+.
+.
+*Unit_Animations_End
+**Unit_End
+.
+.
+.
+***Generic_Units_End

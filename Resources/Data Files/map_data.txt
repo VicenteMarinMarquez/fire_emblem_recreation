@@ -1,0 +1,99 @@
+***Map_Start
+1 Footsteps of Fate
+Images\\Chapter_1_Footsteps_of_Fate.png
+15 10
+
+**Terrain_Start
+2 (0,0) (1,0) (2,0) (3,0) (4,0) (0,1) (1,1) (2,1) (3,1) (4,1)
+4 (5,0) (3,2) (6,2) (10,2) (0,3) (2,4) (5,4) (7,4) (3,5) (8,5) (0,6) (2,6) (3,6) (6,6) (8,6) (9,6) (0,7) (3,7) (6,7) (9,7) (3,8) (5,8) (6,8) (7,8) (1,9) (6,9) (8,9)
+5 (7,0) (8,0) (9,0)
+6 (12,0) (13,0) (14,0) (14,1)
+7 (7,2) (8,3) (14,8) (10,9) (11,9) (12,9)
+8 (11,0) (11,1) (11,3) (11,4) (12,4) (12,6) (13,6) (13,7) (13,8) (13,9) (14,9)
+**Terrain_End
+
+**Units_Start
+3 5 2 5 6 12 7
+*New_Player_Units
+1 1 0
+
+*Enemy_Units_Start
+0 2 5 2 0 25 5 0 4 5 7 7 2 7 5
+1 2
+0 4 5 2 0 25 5 0 4 5 7 7 2 7 5
+1 2
+*Enemy_Units_End
+
+*Allied_Units_Start
+*Allied_Units_End
+
+**Units_End
+
+***Map_End
+
+
+***Map_Start
+2 Sword of Spirits
+Images\\Chapter_2_Sword_of_Spirits.png
+15 10
+
+**Terrain_Start
+2 (8,0) (9,0) (10,0) (11,0) (12,0) (13,0) (14,0) (8,1) (14,1) (8,2) (14,2) (8,3) (14,3) (8,4) (14,4) (8,5) (14,5) (8,6) (9,6) (10,6) (12,6) (13,6) (14,6) (8,7) (9,7) (10,7) (12,7) (13,7) (14,7)
+2 (5,5) (5,6) (4,7) (5,7) (4,8) (4,9)
+3 (2,2) (3,2)
+4 (4,0) (5,0) (5,1) (6,1) (7,2) (5,3) (1,4) (6,4) (3,5) (3,6) (2,8) (8,8) (12,8) (14,8) (9,9) (13,9)
+5 (7,7) (6,8) (7,8) (6,9)
+**Terrain_End
+
+**Units_Start
+3 2 2 3 5 11 1
+*New_Player_Units
+2 1 0 1 1
+
+*Enemy_Units_Start
+0 2 5 2 0 25 5 0 4 5 7 7 2 7 5
+1 2
+*Enemy_Units_End
+
+*Allied_Units_Start
+*Allied_Units_End
+
+**Units_End
+
+***Map_End
+
+
+****FILE_END****
+**** **** **** **** **** **** **** **** **** ****      **** **** **** **** **** **** **** **** **** **** 
+
+//File Format
+***Map_Start
+map_num name
+map_image
+x_dimension y_dimension
+**Terrain_Start //terrain types: 0 is null "- -", 1 is default plains, 2 is wall, 3 is forest, 4 is mountain, 5 is peak, 6 is cliff, 7 is river.
+terrian_type num_of_coords x1 y1 x2 y2 ... //A type of terrain and the coordinates of all of its appearances
+.
+.
+.
+**Terrain_End
+**Units_Start
+num_positions x1 y1 x2 y2 x3 y3 ... //The number of starting positions and coordinates for the player
+*New_Player_Units
+num_new_units unit1_num position1_num unit2_num position2_num ... //The number of new units and their number and positions
+*Enemy_Units_Start
+unit_class x y level xp max_hp str mag skl spd lck def res con mov
+num_of_items item
+.
+.
+.
+*Enemy_Units_End
+*Allied_Units_Start
+unit_class x y level xp max_hp str mag skl spd lck def res con mov
+num_of_items item
+.
+.
+.
+*Allied_Units_End
+**Units_End
+***Map_End

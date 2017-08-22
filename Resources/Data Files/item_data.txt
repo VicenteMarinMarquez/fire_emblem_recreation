@@ -1,0 +1,66 @@
+//--- --- WEAPONS --- ---
+
+**Item_Start
+0 Iron Sword
+0
+Images\\Iron_Sword.png
+*Stats_Start
+46
+0
+1 5 90 0 5
+*Stats_End
+**Item_End
+
+**Item_Start
+1 Iron Lance
+0
+Images\\Iron_Lance.png
+*Stats_Start
+45
+1
+1 7 80 0 8
+*Stats_End
+**Item_End
+
+**Item_Start
+2 Iron Axe
+0
+Images\\Iron_Axe.png
+*Stats_Start
+45
+2
+1 8 75 0 10
+*Stats_End
+**Item_End
+
+//--- --- STAVES --- ---
+
+//--- --- CONSUMABLES --- ---
+
+**Item_Start
+3 Vulnerary
+2
+Images\\Vulnerary.png
+*Stats_Start
+3
+10
+*Stats_End
+**Item_End
+
+****FILE_END****
+**** **** **** **** **** **** **** **** **** ****      **** **** **** **** **** **** **** **** **** **** 
+
+//File Format
+
+**Item_Start
+item_num item_name //The item's number and name
+item_type //Item types are: 0 weapons, 1 staves, 2 consumables.
+item_image
+*Stats_Start
+item_durability
+weapon_type //Only for Weapons. 0 is Sword, 1 is Lance, 2 is Axe, 3 is Bow, 4 is Light Magic, 5 is Anima Magic, 6 is Dark Magic
+Range Might Hit Crit Weight //Only for Weapons
+Range Base_Healing //Only for Staves
+HP_restore //Only for consumables
+*Stats_End
+**Item_End
